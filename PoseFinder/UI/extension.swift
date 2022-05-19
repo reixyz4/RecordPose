@@ -1,0 +1,38 @@
+//
+//  extension.swift
+//  PoseFinder
+//
+//  Created by DSPLAB on 28/3/22.
+//  Copyright © 2022 Apple. All rights reserved.
+//
+
+import Foundation
+import CoreGraphics
+
+func + (left: CGPoint, right: CGPoint) -> CGPoint {
+  return CGPoint(x: left.x + right.x, y: left.y + right.y)
+}
+
+func - (left: CGPoint, right: CGPoint) -> CGPoint {
+  return CGPoint(x: left.x - right.x, y: left.y - right.y)
+}
+
+func * (left: CGPoint, right: CGFloat) -> CGPoint {
+  return CGPoint(x: left.x * right, y: left.y * right)
+}
+
+extension CGSize {
+  var cgPoint: CGPoint {
+    return CGPoint(x: width, y: height)
+  }
+}
+
+extension CGPoint {
+  var cgSize: CGSize {
+    return CGSize(width: x, height: y)
+  }
+  
+  func absolutePoint(in rect: CGRect) -> CGPoint {
+    return CGPoint(x: x * rect.size.width, y: y * rect.size.height) + rect.origin
+  }
+}
