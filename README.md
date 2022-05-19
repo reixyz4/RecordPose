@@ -1,4 +1,4 @@
-# RecordingPoses
+
 Track your poses across time with a dictionary using an iOS App on Xcode
 # RecordPose
 An app that gathers data on a person's pose(Sit/Stand) each minute along their Gender and Age
